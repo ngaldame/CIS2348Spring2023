@@ -1,3 +1,5 @@
+#Nathan Galdamez Gomez
+
 import math
 # Get a wall's height, width, and area in feet
 height = int(input('Please enter your wall\'s height (in feet):\n'))
