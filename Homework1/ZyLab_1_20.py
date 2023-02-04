@@ -1,3 +1,5 @@
+# Nathan Galdamez Gomez
+
 user_num = int(input('Please enter an integer:\n'))
 print('You entered:', user_num)
 # Square then cube user_num
