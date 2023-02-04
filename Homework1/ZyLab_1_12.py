@@ -1,4 +1,5 @@
 # Nathan Galdamez Gomez
+
 # Provided code from ZyLabs is below in the next line
 userNum = int(input())
 # Change + to * to square userNum and store the result in userNum_squared
