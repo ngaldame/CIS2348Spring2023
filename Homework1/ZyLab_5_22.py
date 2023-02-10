@@ -24,19 +24,20 @@ elif firstService == 'Car wax':
 elif firstService == '-':
     print('\nService 1: No service')
 
+# These if and else if statements are for the second service chosen
 if secondService == 'Oil change':
     totalPrice += 35
-    print('Service 2: Oil change, $35')
+    print('Service 2: Oil change, $35\n')
 elif secondService == 'Tire rotation':
     totalPrice += 19
-    print('Service 2: Tire rotation, $19')
+    print('Service 2: Tire rotation, $19\n')
 elif secondService == 'Car wash':
     totalPrice += 7
-    print('Service 2: Car wash, $7')
+    print('Service 2: Car wash, $7\n')
 elif secondService == 'Car wax':
     totalPrice += 12
-    print('Service 2: Car wax, $12')
+    print('Service 2: Car wax, $12\n')
 elif secondService == '-':
-    print('Service 2: No service')
+    print('Service 2: No service\n')
 # Print the user inputs and the total price of both services
 print(f'Total: ${totalPrice}')

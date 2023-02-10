@@ -8,9 +8,9 @@ agave_nectar_cups = float(input('Enter amount of agave nectar (in cups):\n'))
 servings_yielded = float(input('How many servings does this make?\n'))
 # The 4 lines below just print the ingredients inputted
 print('\nLemonade ingredients - yields {:.2f} servings'.format(servings_yielded))
-print('{:.2f} cup(s) of lemon juice'.format(lemon_juice_cups))
-print('{:.2f} cup(s) of water'.format(water_cups))
-print('{:.2f} cup(s) of agave nectar'.format(agave_nectar_cups))
+print('{:.2f} cup(s) lemon juice'.format(lemon_juice_cups))
+print('{:.2f} cup(s) water'.format(water_cups))
+print('{:.2f} cup(s) agave nectar'.format(agave_nectar_cups))
 # This will be for servings desired and amount of ingredients desired
 servings_desired = float(input('\nHow many servings would you like to make?\n'))
 print('\nLemonade ingredients - yields {:.2f} servings'.format(servings_desired))
