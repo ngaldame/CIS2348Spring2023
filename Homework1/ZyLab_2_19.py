@@ -1,4 +1,5 @@
-# Nathan Galdamez Gomez
+# Nathan Galdamez Gomez, ngaldame
+# This is ZyLab 2.19
 
 # Get input for the measurements of ingredients needed for lemonade
 lemon_juice_cups = float(input('Enter amount of lemon juice (in cups):\n'))

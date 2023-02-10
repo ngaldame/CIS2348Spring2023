@@ -1,4 +1,5 @@
-# Nathan Galdamez Gomez
+# Nathan Galdamez Gomez, ngaldame
+# This is ZyLabs 1.20
 
 user_num = int(input('Please enter an integer:\n'))
 print('You entered:', user_num)

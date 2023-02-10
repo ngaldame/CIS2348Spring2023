@@ -1,4 +1,5 @@
-# Nathan Galdamez Gomez
+# Nathan Galdamez Gomez, ngaldame
+# This is ZyLab 1.12
 
 # Provided code from ZyLabs is below in the next line
 userNum = int(input())

@@ -1,4 +1,5 @@
-# Nathan Galdamez Gomez
+# Nathan Galdamez Gomez, ngaldame
+# This is ZyLab 5.22
 
 # Create variables and print the services and their prices
 totalPrice = 0

@@ -1,4 +1,5 @@
-#Nathan Galdamez Gomez
+# Nathan Galdamez Gomez, ngaldame
+# This is ZyLab 3.19
 
 import math
 # Get a wall's height, width, and area in feet
