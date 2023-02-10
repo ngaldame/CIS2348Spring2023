@@ -6,4 +6,4 @@ userNum = int(input())
 # Change + to * to square userNum and store the result in userNum_squared
 userNum_squared = userNum * userNum
 # Print the stored result with a newline at the end
-print(userNum_squared, '\n')
+print(userNum_squared)
