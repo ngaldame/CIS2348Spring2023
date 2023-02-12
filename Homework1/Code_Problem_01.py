@@ -1,6 +1,6 @@
 # Nathan Galdamez Gomez, ngaldame
 
-print('\nBirthday Calculator\n')
+print('\nBirthday Calculator')
 print('Current day')
 current_month = int(input('Month: '))
 current_day = int(input('Day: '))
