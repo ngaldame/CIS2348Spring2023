@@ -1,4 +1,4 @@
-# Nathan Galdamez Gomez, ngaldame
+# Nathan Galdamez Gomez, 2141118
 # This is ZyLab 5.22
 
 # Create variables and print the services and their prices

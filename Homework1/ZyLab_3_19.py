@@ -1,4 +1,4 @@
-# Nathan Galdamez Gomez, ngaldame
+# Nathan Galdamez Gomez, 2141118
 # This is ZyLab 3.19
 
 import math

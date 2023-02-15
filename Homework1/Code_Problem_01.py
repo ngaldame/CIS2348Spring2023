@@ -1,4 +1,4 @@
-# Nathan Galdamez Gomez, ngaldame
+# Nathan Galdamez Gomez, 2141118
 
 print('\nBirthday Calculator')
 print('Current day')

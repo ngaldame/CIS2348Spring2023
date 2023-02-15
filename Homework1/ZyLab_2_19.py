@@ -1,4 +1,4 @@
-# Nathan Galdamez Gomez, ngaldame
+# Nathan Galdamez Gomez, 2141118
 # This is ZyLab 2.19
 
 # Get input for the measurements of ingredients needed for lemonade

@@ -1,4 +1,4 @@
-# Nathan Galdamez Gomez, ngaldame
+# Nathan Galdamez Gomez, 2141118
 # This is ZyLab 1.12
 
 # Provided code from ZyLabs is below in the next line

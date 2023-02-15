@@ -1,4 +1,4 @@
-# Nathan Galdamez Gomez, ngaldame
+# Nathan Galdamez Gomez, 2141118
 # This is ZyLabs 1.20
 
 user_num = int(input('Enter integer:\n'))
