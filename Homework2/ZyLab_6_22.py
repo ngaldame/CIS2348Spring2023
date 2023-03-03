@@ -22,7 +22,7 @@ for x in range(-10, 11):
             check = True
 
 # if not statement is used in order to get rid of PyCharm warnings and simplify the code
-if not check:
+if check != True:
     print('No solution')
 else:
     print(xFinal, yFinal)
