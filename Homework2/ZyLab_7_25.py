@@ -3,8 +3,8 @@
 
 # The function below uses floor division in order to return accurate change
 def exact_change(user_total):
-    # dols is for dollars, quarts is for quarters, dimes is for dimes
-    # nicks is for nickels, and penns is for pennies
+    # dols are for dollars, quarts are for quarters, dimes are for dimes
+    # nicks are for nickels, and penns are for pennies
     dols = user_total // 100
     user_total %= 100
 
