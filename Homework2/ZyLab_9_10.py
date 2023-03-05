@@ -17,3 +17,6 @@ for row in info:
         else:
             word_collection[word] = 1
 
+# Below lines of code just print the words and their frequencies
+for word, num in word_collection.items():
+    print(word, num)
