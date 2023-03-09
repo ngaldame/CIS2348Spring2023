@@ -29,5 +29,7 @@ with open('inputDates.txt', 'r') as file:
             # I used # for removing leading 0s on Windows, - is for other OSs
                 if date_holder <= today:
                     output.write(date_holder.strftime('%#m/%#d/%Y') + '\n')
+
+            # Pass if the input is not '-1' and is not correctly formatted
             except ValueError:
                 pass
