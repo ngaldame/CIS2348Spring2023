@@ -37,4 +37,5 @@ if __name__ == '__main__':
     print('\nTOTAL COST')
     one.print_item_cost()
     two.print_item_cost()
-    print(f'Total: ${math.floor(one.item_price) * one.item_quantity + math.floor(two.item_price) * two.item_quantity}')
+    print(f'\nTotal: ', end='')
+    print(f'${math.floor(one.item_price) * one.item_quantity + math.floor(two.item_price) * two.item_quantity}')
