@@ -88,6 +88,21 @@ class ShoppingCart:
         else:
             print('SHOPPING CART IS EMPTY')
             
+# The print_menu function for printing the menu
+def print_menu(cart_created):
+    cust_cart = cart_created
+    menu = ('\nMENU\na - Add menu to cart\nr - Remove item from cart\nc - Change item quantity\ni - Output item\'s descriptions\n
+            o - Output shopping cart\nq - Quit\n')
+    # option will be an empty string for now
+    option = ''
+    # As long as option is not q, menu will run
+    while option != q:
+            print(menu)
+            option = input('Choose an option:\n')
+            # Choose option ONLY if none of the characters inputted
+            while option != a and option != r and option != c and option != i and option != o and option != q:
+                option = input('Choose an option:\n')
+            
 # Below is the main driver code
 if __name__ == '__main__':
     # Create object of ShoppingCart class and get input of customer's name and today's date
