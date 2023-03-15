@@ -95,14 +95,16 @@ def print_menu(cart_created):
             o - Output shopping cart\nq - Quit\n')
     # option will be an empty string for now
     option = ''
-    # As long as option is not q, menu will run
     while option != q:
             print(menu)
             option = input('Choose an option:\n')
-            # Choose option ONLY if none of the characters inputted
             while option != a and option != r and option != c and option != i and option != o and option != q:
                 option = input('Choose an option:\n')
-            
+            # print Output shopping cart menu option
+            if option == 'o':
+                print('OUTPUT SHOPPING CART')
+                cust_cart.print_total()
+                
 # Below is the main driver code
 if __name__ == '__main__':
     # Create object of ShoppingCart class and get input of customer's name and today's date
@@ -110,3 +112,4 @@ if __name__ == '__main__':
     today = input('Enter today's date\n')
     print(f'Customer name: {name}\nToday's date: {today}')
     cart_created = ShoppingCart(name, today)
+    print_menu(cart_created)
