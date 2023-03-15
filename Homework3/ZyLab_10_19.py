@@ -90,7 +90,7 @@ class ShoppingCart:
             
 # Below is the main driver code
 if __name__ == '__main__':
-    # Create 2 objects of ItemToPurchase class and get input of both item's attributes
+    # Create object of ShoppingCart class and get input of customer's name and today's date
     name = input('Enter customer's name:\n')
     today = input('Enter today's date\n')
     print(f'Customer name: {name}\nToday's date: {today}')
