@@ -91,22 +91,7 @@ class ShoppingCart:
 # Below is the main driver code
 if __name__ == '__main__':
     # Create 2 objects of ItemToPurchase class and get input of both item's attributes
-    print('Item 1')
-    one = ItemToPurchase()
-    one.item_name = str(input('Enter the item name:\n'))
-    one.item_price = float(input('Enter the item price:\n'))
-    one.item_quantity = int(input('Enter the item quantity:\n'))
-
-    print('\nItem 2')
-    two = ItemToPurchase()
-    two.item_name = str(input('Enter the item name:\n'))
-    two.item_price = float(input('Enter the item price:\n'))
-    two.item_quantity = int(input('Enter the item quantity:\n'))
-
-    # Calculate total cost of items by multiplying their prices and quantities
-    print('\nTOTAL COST')
-    one.print_item_cost()
-    two.print_item_cost()
-    print(f'\nTotal: ', end='')
-    print(f'${math.floor(one.item_price) * one.item_quantity + math.floor(two.item_price) * two.item_quantity}')
-    
+    name = input('Enter customer's name:\n')
+    today = input('Enter today's date\n')
+    print(f'Customer name: {name}\nToday's date: {today}')
+    cart_created = ShoppingCart(name, today)
