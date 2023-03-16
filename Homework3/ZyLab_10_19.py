@@ -104,7 +104,10 @@ def print_menu(cart_created):
             if option == 'o':
                 print('OUTPUT SHOPPING CART')
                 cust_cart.print_total()
-                
+            elif option == 'i':
+                print('OUTPUT ITEMS\' DESCRIPTIONS')
+                cust_cart.print_descriptions()
+            
 # Below is the main driver code
 if __name__ == '__main__':
     # Create object of ShoppingCart class and get input of customer's name and today's date
