@@ -104,10 +104,20 @@ def print_menu(cart_created):
             if option == 'o':
                 print('OUTPUT SHOPPING CART')
                 cust_cart.print_total()
+            # print Output item's description menu option
             elif option == 'i':
                 print('OUTPUT ITEMS\' DESCRIPTIONS')
                 cust_cart.print_descriptions()
-            
+            # print Add item to cart menu option
+            elif option == 'a':
+                print('ADD ITEM TO CART')
+                name = input('Enter the item name:\n')
+                description = input('Enter the item description:\n')
+                price = int(input('Enter the item price:\n'))
+                quantity = int(input('Enter the item quantity:\n'))
+                itp = ItemToPurchase(name, description, price, quantity)
+                cust_cart.add_items(itp)
+                
 # Below is the main driver code
 if __name__ == '__main__':
     # Create object of ShoppingCart class and get input of customer's name and today's date
