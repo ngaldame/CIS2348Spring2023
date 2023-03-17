@@ -122,8 +122,15 @@ def print_menu(cart_created):
                 print('REMOVE ITEM FROM CART')
                 i_name = input('Enter name of item to remove:\n')
                 cust_cart.remove_item(i_name)
-            # TODO: create Change item quantity menu option
-            
+            # print Change item quantity menu option
+            elif option == 'c':
+                print('CHANGE ITEM QUANTITY')
+                item_n = input('Enter the item name:\n')
+                item_q = input('Enter the new quantity:\n')
+                # automatically set price to 0
+                itp = ItemToPurchase(item_n, 0, item_q)
+                cust_cart.modify_item(itp)
+                
 # Below is the main driver code
 if __name__ == '__main__':
     # Create object of ShoppingCart class and get input of customer's name and today's date
