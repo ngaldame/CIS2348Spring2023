@@ -10,7 +10,7 @@ num_list = []
 # for loop to search each number in ns
 for n in ns:
     # if statement will append n in num_list if n > 0
-    if int(n) > 0:
+    if int(n) >= 0:
         num_list.append(int(n))
 
 # Sort the list
