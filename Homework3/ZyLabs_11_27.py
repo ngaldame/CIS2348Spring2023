@@ -29,3 +29,8 @@ while True:
     print('r - Output players above a rating\no - Output roster\nq - Quit')
     choice = input('Choose an option: ')
     
+    # Print roster if choice is o
+    if choice == 'o':
+        rosterOutput()
+    
+    
