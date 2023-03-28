@@ -32,8 +32,13 @@ while True:
     # Print roster if choice is o
     if choice == 'o':
         rosterOutput()
-    # Add a new player's attributes and add them to the athletes dictionary
-    if choice == 'a':
+    # Add a new player's attributes and add them to the athletes dictionary if choice is a
+    elif choice == 'a':
         jersey = input('Enter a new player's jersey number:\n')
         rate = input('Enter the player's rating:\n')
         athletes[jersey] = rate
+    # Delete a player from the roster and dictionary if choice is d
+    elif choice == 'd':
+        jersey = input('Enter a player's jersey number:\n')
+        del athletes[jersey]
+    
