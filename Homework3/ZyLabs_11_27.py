@@ -21,3 +21,11 @@ for i in range(5):
     athletes[jersey] = input(f'Enter player {i+1}\'s rating: \n')
     print('\n')
     
+rosterOutput()
+
+# Print menu and input a menu option in while loop
+while True:
+    print('a - Add player\nd - Remove player\nu - Update player rating\n', end='')
+    print('r - Output players above a rating\no - Output roster\nq - Quit')
+    choice = input('Choose an option: ')
+    
