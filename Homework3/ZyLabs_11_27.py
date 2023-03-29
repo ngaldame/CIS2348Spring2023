@@ -41,4 +41,9 @@ while True:
     elif choice == 'd':
         jersey = input('Enter a player's jersey number:\n')
         del athletes[jersey]
-    
+    # Update a player's rating if choice is u
+    elif choice == 'u':
+        jersey = input('Enter a player's jersey number:\n')
+        rate = input('Enter a new rating for player:\n')
+        # athletes dictionary now contains updated player attributes
+        athletes[jersey] = rate
