@@ -47,3 +47,23 @@ while True:
         rate = input('Enter a new rating for player:\n')
         # athletes dictionary now contains updated player attributes
         athletes[jersey] = rate
+    # Output players that have a rating above inputted rating if choice is r
+    elif choice == 'r':
+        rate = input('Enter a rating:\n')
+        keys = list(athletes.keys())
+        keys.sort()
+        print(f'ABOVE {rate}')
+        
+        # a variable called tracker will keep track of the number of players
+        tracker = 0
+        for key in keys:
+            # Print the attributes of the players
+            if athletes[key] > rating:
+                print(f'Jersey number: {key}, Rating: {players[key]}')
+                
+                # tracker will increment by 1
+                tracker += 1
+     
+     # Quit if choice is q
+     elif choice == 'q':
+        break
