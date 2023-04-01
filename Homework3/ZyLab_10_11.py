@@ -8,16 +8,15 @@ class FoodItem:
         self.carbs = carbs
         self.protein = protein
 
-    # This function will have servings passed into its' constructor
+    # This function will have servings passed into its constructor
     def get_calories(self, num_servings):
         # Calorie formula
-        calories = ((self.fat * 9) + (self.carbs * 4) + (self.protein * 4)) * num_servings;
+        calories = ((self.fat * 9) + (self.carbs * 4) + (self.protein * 4)) * num_servings
         return calories
 
-    # This function will print the name and its' instance attributes
+    # This function will print the name and its instance attributes
     def print_info(self):
         print('Nutritional information per serving of {}:'.format(self.name))
         print('   Fat: {:.2f} g'.format(self.fat))
         print('   Carbohydrates: {:.2f} g'.format(self.carbs))
         print('   Protein: {:.2f} g'.format(self.protein))
-
