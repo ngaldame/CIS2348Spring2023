@@ -11,5 +11,5 @@ for w in ws:
     # freq is a variable that will hold each word's frequency
     freq = ws.count(w)
     
-    #Print the word and its frequenccy
+    # Print the word and its frequenccy
     print(w, freq)
