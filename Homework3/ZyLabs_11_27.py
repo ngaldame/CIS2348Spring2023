@@ -1,15 +1,16 @@
 # Nathan Galdamez Gomez, 2141118
 
 # A definition called rosterOutput
-def rosterOutput():
+def roster_output():
     # Keys from athletes dictionary will be sorted
-    keys = list(athletes.keys())
-    keys.sort()
+    # Collection of keys are called ks
+    ks = list(athletes.keys())
+    ks.sort()
     
     print('ROSTER')
     # Print each athlete's attributes
-    for key in keys:
-        print(f'Jersey number: {key}, Rating: {athletes[key]}')
+    for k in ks:
+        print(f'Jersey number: {k}, Rating: {athletes[k]}')
     
     
 # Empty dictionary called athletes
@@ -21,7 +22,7 @@ for i in range(5):
     athletes[jersey] = input(f'Enter player {i+1}\'s rating: \n')
     print('\n')
     
-rosterOutput()
+roster_output()
 
 # Print menu and input a menu option in while loop
 while True:
@@ -31,19 +32,19 @@ while True:
     
     # Print roster if choice is o
     if choice == 'o':
-        rosterOutput()
+        roster_output()
     # Add a new player's attributes and add them to the athletes dictionary if choice is a
     elif choice == 'a':
-        jersey = input('Enter a new player's jersey number:\n')
-        rate = input('Enter the player's rating:\n')
+        jersey = input('Enter a new player\'s jersey number:\n')
+        rate = input('Enter the player\'s rating:\n')
         athletes[jersey] = rate
     # Delete a player from the roster and dictionary if choice is d
     elif choice == 'd':
-        jersey = input('Enter a player's jersey number:\n')
+        jersey = input('Enter a player\'s jersey number:\n')
         del athletes[jersey]
     # Update a player's rating if choice is u
     elif choice == 'u':
-        jersey = input('Enter a player's jersey number:\n')
+        jersey = input('Enter a player\'s jersey number:\n')
         rate = input('Enter a new rating for player:\n')
         # athletes dictionary now contains updated player attributes
         athletes[jersey] = rate
@@ -58,12 +59,12 @@ while True:
         tracker = 0
         for key in keys:
             # Print the attributes of the players
-            if athletes[key] > rating:
-                print(f'Jersey number: {key}, Rating: {players[key]}')
+            if athletes[key] > rate:
+                print(f'Jersey number: {key}, Rating: {athletes[key]}')
                 
                 # tracker will increment by 1
                 tracker += 1
      
-     # Quit if choice is q
-     elif choice == 'q':
+    # Quit if choice is q
+    elif choice == 'q':
         break
