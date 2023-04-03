@@ -23,9 +23,32 @@ class InventoryOput:
         price = its[it]['price']
         date_service = its[it]['service_date']
         broken = its[it]['damaged']
-        file.write(f'{id}, {manufacturer_name}, {i_type}, {price} {date_service}, {broken}')
+        file.write(f'{id}, {manufacturer_name}, {i_type}, {price}, {date_service}, {broken}')
         
-        
+  # by_type function will create a file that will sort items by their item ID which is in a variable called id
+  # CHANGE USAGE OF LAMBDA TO A LIST AND/OR DICTIONARY ITERATION FOR LINES 18 TO 26 (ONLY if lambda is in this function)
+  # (DO NOT USE PANDAS, ITEMGETTER, DATABASES, OR LAMBDA)
+  def by_type(self):
+    its = self.list_item
+    types = []
+    keys = sorted(its.keys())
+    for it in its:
+      it_type = its[it]['item_type']
+      if it_type not in types:
+        types.append(it_type)
+    for type in types:
+      file_name = type.capitalize() + 'LaptopInventory.csv'
+      with open(file_name, 'w') as file:
+        for it in keys:
+          id = it
+          manufacturer_name = its[it]['manufacturer']
+          price = its[it]['price']
+          date_service = its[it]['service_date']
+          broken = its[it]['damaged']
+          i_type = its[it]['item_type']
+          if type == it_type:
+            file.write(f'{id}, {manufacturer_name}, {price}, {date_service}, {broken}')
+
 # main driver code is below
 if __name__ == '__main__':
   # A empty dictionary called its to store the items in inventory
