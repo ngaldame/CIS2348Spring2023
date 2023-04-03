@@ -19,17 +19,17 @@ athletes = {}
 
 # for loop will print 5 athletes' attributes
 for i in range(5):
-    jersey = input(f'Enter player {i+1}\'s jersey number: \n')
-    athletes[jersey] = input(f'Enter player {i+1}\'s rating: \n')
+    jersey = input(f'Enter player {i+1}\'s jersey number:')
+    athletes[jersey] = input(f'Enter player {i+1}\'s rating:')
     print('\n')
     
 roster_output()
 
 # Print menu and input a menu option in while loop
 while True:
-    print('a - Add player\nd - Remove player\nu - Update player rating\n', end='')
+    print('MENU\na - Add player\nd - Remove player\nu - Update player rating\n', end='')
     print('r - Output players above a rating\no - Output roster\nq - Quit')
-    choice = input('Choose an option: ')
+    choice = input('\nChoose an option: ')
     
     # Print roster if choice is o
     if choice == 'o':
