@@ -1,5 +1,5 @@
 # Nathan Galdamez Gomez, 2141118
-# This is ZyLab 10.17
+# This is ZyLab 10.19
 
 # import math module will round down item prices
 import math
