@@ -48,6 +48,22 @@ class InventoryOput:
           i_type = its[it]['item_type']
           if type == it_type:
             file.write(f'{id}, {manufacturer_name}, {price}, {date_service}, {broken}')
+            
+  def past_service(self):
+    its = self.list_item
+    keys = sorted(items.keys(), key=lambda x: datetime.strptime(its[x]['past_service'], '%m/%d/%Y').date(), reverse=True)
+    with open('PastServiceDateInventory.csv', 'w') as file:
+      for it in keys:
+        id = it
+        manufacturer_name = its[it]['manufacturer']
+        i_type = its[it]['item_type']
+        price = its[it]['price']
+        date_service = its[it]['service_date']
+        broken = its[it]['damaged']
+        today = datetime.now().date()
+        service_expiration = datetime.strptime(date_service, '%m/%d/%Y').date
+        if service expiration < today:
+          file.write(f'{id}, {manufacturer_name}, {i_type}, {price}, {date_service}, {broken}')
 
 # main driver code is below
 if __name__ == '__main__':
