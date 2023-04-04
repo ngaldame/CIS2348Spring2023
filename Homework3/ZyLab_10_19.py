@@ -95,7 +95,7 @@ def print_menu(cart_created):
             o - Output shopping cart\nq - Quit\n')
     # option will be an empty string for now
     option = ''
-    while option != q:
+    while option != 'q':
             print(menu)
             option = input('Choose an option:\n')
             while option != a and option != r and option != c and option != i and option != o and option != q:
