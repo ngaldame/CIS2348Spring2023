@@ -147,4 +147,45 @@ class ShoppingCart:
 
         # Print the final cost regardless
         print(f'Total: ${fin_co}')
+        
+        
+# The print_menu function for printing the menu
+def print_menu(created_cart):
+    menu = ('\nMENU\n'
+            'a - Add item to cart\n'
+            'r - Remove item from cart\n'
+            'c - Change item quantity\n'
+            'i - Output items\' descriptions\n'
+            'o - Output shopping cart\n'
+            'q - Quit\n')
 
+    # A variable called option will be an empty string for now
+    option = ''
+
+    # Get input for option while option is not q
+    while option != 'q':
+        print(menu)
+        option = input('Choose an option:\n')
+
+        while option != 'a' and option != 'r' and option != 'c' and option != 'i' and option != 'o' and option != 'q':
+            option = input('Choose an option:\n')
+
+        # print Output shopping cart menu option
+        if option == 'o':
+            created_cart.display_cart()
+
+        # print Output item's description menu option
+        elif option == 'i':
+            created_cart.print_descriptions()
+
+        # print Add item to cart menu option
+        elif option == 'a':
+            created_cart.add_item()
+
+        # print Remove item menu option
+        elif option == 'r':
+            created_cart.remove_item()
+
+        # print Change item quantity menu option
+        elif option == 'c':
+            created_cart.modify_item()
