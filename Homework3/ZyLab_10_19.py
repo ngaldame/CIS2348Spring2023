@@ -189,3 +189,13 @@ def print_menu(created_cart):
         # print Change item quantity menu option
         elif option == 'c':
             created_cart.modify_item()
+            
+            
+# Below is the main driver code
+if __name__ == '__main__':
+    # Create object of ShoppingCart class and get input of customer's name and today's date
+    name = str(input('Enter customer\'s name:\n'))
+    today = str(input('Enter today\'s date:\n'))
+    print(f'\nCustomer name: {name}\nToday\'s date: {today}')
+    cart_created = ShoppingCart(name, today)
+    print_menu(cart_created)
