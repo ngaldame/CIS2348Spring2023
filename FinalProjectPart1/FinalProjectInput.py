@@ -8,6 +8,7 @@ class OutputInventory:
     def __init__(self, item_list):
         self.item_list = item_list
 
+    # full function will write to FullInventory.csv
     def full(self):
         # Open FullInventory.csv for writing and sort all the keys
         with open('FullInventory.csv', 'w') as the_file:
@@ -26,6 +27,7 @@ class OutputInventory:
                 # Write all the traits of an item to FullInventory.csv
                 the_file.write(f'{iden}, {name_man}, {type_item}, {the_price}, {date_service}, {damage}\n')
 
+    # by_type function will write to LaptopInventory.csv
     def by_type(self):
 
         # A csv file will have item ID, manufacturer name, price, service date, damaged written to it
@@ -53,6 +55,7 @@ class OutputInventory:
                     if single_type == type_item:
                         the_file.write(f'{iden}, {name_man}, {the_price}, {date_service}, {damage}\n')
 
+    # past_service function will write to PastServiceDateInventory.csv
     def past_service(self):
 
         # A csv output file made for items past the service date and sorted from old to new
@@ -62,6 +65,7 @@ class OutputInventory:
         all_keys = sorted(all_items.keys(), reverse=True)
 
         with open('PastServiceDateInventory.csv', 'w') as the_file:
+            # for loop will get all traits if each item in the keys
             for single_item in all_keys:
                 iden = single_item
                 name_man = all_items[single_item]['manufacturer']
@@ -76,6 +80,7 @@ class OutputInventory:
                 if service_exp < present:
                     the_file.write(f'{iden},{name_man},{type_item},{the_price},{date_service},{damage}\n')
 
+    # damaged function will write to DamagedInventory.csv
     def damaged(self):
 
         # A csv output file made for all items that are damaged, and sorted from highest to lowest price
@@ -84,6 +89,8 @@ class OutputInventory:
         # Get order of keys to write to file based on price (reverse will print the items' prices in DESCENDING order)
         all_keys = sorted(all_items.keys(), reverse=True)
         with open('DamagedInventory.csv', 'w') as the_file:
+
+            # for loop will get all traits if each item in the keys
             for single_item in all_keys:
                 iden = single_item
                 name_man = all_items[single_item]['manufacturer']
@@ -92,11 +99,12 @@ class OutputInventory:
                 date_service = all_items[single_item]['service_date']
                 damage = all_items[single_item]['damaged']
 
-                # Write the id, manufacturer, type, price, and service to DamagedInventory.csv
+                # if statement will write the id, manufacturer, type, price, and service to DamagedInventory.csv
                 if damage:
                     the_file.write(f'{iden}, {name_man}, {type_item}, {the_price}, {date_service}')
 
 
+# The main driver code is below
 if __name__ == '__main__':
     items = {}
     files = ['ManufacturerList.csv', 'PriceList.csv', 'ServiceDatesList.csv']
@@ -107,6 +115,8 @@ if __name__ == '__main__':
             csv_reader = csv.reader(csv_file, delimiter=',')
             for line in csv_reader:
                 item_id = line[0]
+
+                # Read each file and strip whitespace for ManufacturerList.csv
                 if file == files[0]:
                     items[item_id] = {}
                     man_name = line[1]
@@ -132,6 +142,8 @@ if __name__ == '__main__':
     # Get the different manufacturers and types in a list
     types = []
     manufacturers = []
+
+    # Check if item manufacturers and types are in types and append them if they are not
     for item in items:
         checked_manufacturer = items[item]['manufacturer']
         checked_type = items[item]['item_type']
@@ -165,6 +177,8 @@ if __name__ == '__main__':
                         bad_input = True
                     else:
                         selected_type = word
+
+            # if-else statement determines if there is a match or not
             if not selected_manufacturer or not selected_type or bad_input:
                 print('No such item in inventory')
             else:
@@ -175,7 +189,6 @@ if __name__ == '__main__':
                 matching_items = []
 
                 # Store items with same type, different manufacturer, in inventory, undamaged status, not past service
-
                 similar_items = {}
                 for item in keys:
                     if items[item]['item_type'] == selected_type:
