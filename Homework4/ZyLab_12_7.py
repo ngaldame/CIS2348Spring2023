@@ -9,3 +9,13 @@ def get_age():
     return age
   else:
     raise ValueError('Invalid age')
+
+# fat_burning_heart_rate function will calculate and return the fat burning heart rate
+def fat_burning_heart_rate(age):
+  # Equation for fat burning heart rate below (.7 is the same as 70%)
+  heart_rate = (220 * .7) - age
+  return heart_rate
+
+# TODO: Make and finish main driver code
+if __name__ == '__main__':
+  # Finish main driver code
