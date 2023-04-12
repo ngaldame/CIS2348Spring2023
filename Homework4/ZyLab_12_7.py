@@ -16,6 +16,14 @@ def fat_burning_heart_rate(age):
   heart_rate = (220 * .7) - age
   return heart_rate
 
-# TODO: Make and finish main driver code
+# The main driver code is below
 if __name__ == '__main__':
-  # Finish main driver code
+  
+  # Try and except statement will determine if input is valid or not
+  try:
+    age = get_age()
+    heart_rate = fat_burning_heart_rate(age)
+    print(f'Fat burning heart rate for a {age} year-old: {heart_rate} bpm')
+  except ValueError as ex:
+    print(ex)
+    print('Could not calculate heart rate info.')
