@@ -13,7 +13,7 @@ def get_age():
 # fat_burning_heart_rate function will calculate and return the fat burning heart rate
 def fat_burning_heart_rate(age):
   # Equation for fat burning heart rate below (.7 is the same as 70%)
-  heart_rate = (220 * .7) - age
+  heart_rate = (220 - age) * .7
   return heart_rate
 
 # The main driver code is below
@@ -26,4 +26,4 @@ if __name__ == '__main__':
     print(f'Fat burning heart rate for a {age} year-old: {heart_rate} bpm')
   except ValueError as ex:
     print(ex)
-    print('Could not calculate heart rate info.')
+    print('Could not calculate heart rate info.\n')
