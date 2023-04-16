@@ -8,7 +8,7 @@ def get_age():
   if age >= 18 and age <= 75:
     return age
   else:
-    raise ValueError('Invalid age')
+    raise ValueError('Invalid age.')
 
 # fat_burning_heart_rate function will calculate and return the fat burning heart rate
 def fat_burning_heart_rate(age):
