@@ -13,9 +13,10 @@ while name != '-1':
     age = int(parts[1]) + 1
     print(f'{name} {age}')
     
-    # Get next line
-    parts = input.split()
-    name = parts[0]
-    
-  # TODO: Finish except ValueError statement
+  # ValueError exception will output 0, which will be the exception value of the age
   except ValueError as ex:
+    print('{} {}'.format(name, 0))
+    
+  # Get next line as long as name != '-1'
+  parts = input().split()
+  name = parts[0]
