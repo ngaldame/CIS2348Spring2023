@@ -3,7 +3,7 @@
 
 # A function called selection_sort_descend_trace
 def selection_sort_descend_trace():
-  # Map inputted numbers into a list
+  # Map inputted numbers into a list called nums
   nums = list(map(int, input().split(' ')))
   
   # Iterate through each element called i in len(nums) - 1 in for loop
@@ -17,4 +17,12 @@ def selection_sort_descend_trace():
       # Next index will be the new maximum IF j > maximum
       if int(nums[j]) > int(nums[maximum]):
         maximum = j
-      # TODO: Swap each iteration of indexes in an integer list
+      
+      # Swap each iteration of indexes with maximum index in an integer list
+      nums[i], nums[maximum] = nums[maximum], nums[i]
+      
+      # Output the list of numbers in nums
+      print(nums)
+      
+# TODO: Finish the main driver code
+if __name__ == '__main__':
