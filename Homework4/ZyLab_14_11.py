@@ -4,7 +4,8 @@
 # A function called selection_sort_descend_trace
 def selection_sort_descend_trace():
   # Map inputted numbers into a list called nums
-  nums = list(map(int, input().split(' ')))
+  nums = []
+  nums = [int(num) for num in input('').split()]
   
   # Iterate through each element called i in len(nums) - 1 in for loop
   for i in range(len(nums) - 1):
@@ -22,7 +23,12 @@ def selection_sort_descend_trace():
     nums[i], nums[maximum] = nums[maximum], nums[i]
       
     # Output the list of numbers in nums as strings and join with spaces
-    print(' '.join(map(str, nums)))
+    for maximum in nums:
+      print(maximum, end=' ')
+      
+    print()
+    
+  return nums
       
 # Main driver code calling selection_sort_descend_trace function to execute program
 if __name__ == '__main__':
