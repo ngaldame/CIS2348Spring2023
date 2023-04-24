@@ -18,11 +18,12 @@ def selection_sort_descend_trace():
       if int(nums[j]) > int(nums[maximum]):
         maximum = j
       
-      # Swap each iteration of indexes with maximum index in an integer list
-      nums[i], nums[maximum] = nums[maximum], nums[i]
+    # Swap each iteration of indexes with maximum index in an integer list
+    nums[i], nums[maximum] = nums[maximum], nums[i]
       
-      # Output the list of numbers in nums
-      print(nums)
+    # Output the list of numbers in nums as strings and join with spaces
+    print(' '.join(map(str, nums)))
       
-# TODO: Finish the main driver code
+# Main driver code calling selection_sort_descend_trace function to execute program
 if __name__ == '__main__':
+  selection_sort_descend_trace()
