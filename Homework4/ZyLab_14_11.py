@@ -32,4 +32,9 @@ def selection_sort_descend_trace():
       
 # Main driver code calling selection_sort_descend_trace function to execute program
 if __name__ == '__main__':
-  selection_sort_descend_trace()
+  # Map inputted numbers into a list called nums
+  nums = []
+  nums = [int(num) for num in input('').split()]
+  
+  # Call the function
+  selection_sort_descend_trace(nums)
