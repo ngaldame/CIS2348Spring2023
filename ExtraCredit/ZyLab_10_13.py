@@ -41,3 +41,9 @@ if __name__ == '__main__':
 
     # Determine smaller triangle (use get_area()) and output smaller triangle's info (use print_info())
     print('Triangle with smaller area:')
+
+    # if-else statement will call print_info method for whichever triangle is smaller
+    if triangle1.get_area() > triangle2.get_area():
+        triangle2.print_info()
+    else:
+        triangle1.print_info()
