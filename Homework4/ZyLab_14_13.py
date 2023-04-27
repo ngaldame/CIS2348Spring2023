@@ -33,6 +33,20 @@ def partition(user_ids, i, k):
         # Swap the elements if the element left of the pivot is larger than the element right of the pivot
         user_ids[low], user_ids[h] = user_ids[h], user_ids[low]
 
-# TODO: Write the quicksort algorithm that recursively sorts the low and
-#       high partitions. Add 1 to num_calls each time quicksort() is called
+
+# quicksort algorithm recursively sorts the low and high partitions. Add 1 to num_calls each time quicksort() is called
 def quicksort(user_ids, i, k):
+    # Reference the num_calls variable by using global and increment num_calls by 1
+    global num_calls
+    num_calls = num_calls + 1
+
+    # if statement below will recursively sort the low and high partitions
+    if i < k:
+        # split index found by calling partition in next line of code
+        seperate = partition(user_ids, i, k)
+
+        # Both sides of the subarray will be called recursively
+        quicksort(user_ids, i, seperate)
+        quicksort(user_ids, seperate + 1, k)
+
+# Finish main driver code
