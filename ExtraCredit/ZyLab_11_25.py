@@ -52,6 +52,6 @@ elif location == 4:
     print('Weight in pounds: {:.2f}'.format(all_weights[3]))
     print('Weight in pounds: {:.2f}'.format(kilo_weight_4))
 
-# Sort the weights in  the list all_weights from lightest to heaviest weight and print the sorted list
+# Sort the weights in the list all_weights from lightest to heaviest weight and print the sorted list
 all_weights.sort()
 print(f'Sorted list: {all_weights}')
