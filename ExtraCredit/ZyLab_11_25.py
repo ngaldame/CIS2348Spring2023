@@ -31,27 +31,27 @@ for weight in all_weights:
 print('Max weight: {:.2f}'.format(max_weight))
 
 # Prompt the user for a number between 1 and 4, which will be the user specified location
-location = int(input('Enter a list location (1 - 4):\n'))
+location = int(input('\nEnter a list location (1 - 4):\n'))
 
 # if-elif statements will output the inputted location along with their respective weights in pounds and kilograms
 # 1 kilogram is equal to 2.2 pounds.
 if location == 1:
     kilo_weight_1 = all_weights[0] / 2.2
     print('Weight in pounds: {:.2f}'.format(all_weights[0]))
-    print('Weight in pounds: {:.2f}'.format(kilo_weight_1))
+    print('Weight in kilograms: {:.2f}'.format(kilo_weight_1))
 elif location == 2:
     kilo_weight_2 = all_weights[1] / 2.2
     print('Weight in pounds: {:.2f}'.format(all_weights[1]))
-    print('Weight in pounds: {:.2f}'.format(kilo_weight_2))
+    print('Weight in kilograms: {:.2f}'.format(kilo_weight_2))
 elif location == 3:
     kilo_weight_3 = all_weights[2] / 2.2
     print('Weight in pounds: {:.2f}'.format(all_weights[2]))
-    print('Weight in pounds: {:.2f}'.format(kilo_weight_3))
+    print('Weight in kilograms: {:.2f}'.format(kilo_weight_3))
 elif location == 4:
     kilo_weight_4 = all_weights[3] / 2.2
     print('Weight in pounds: {:.2f}'.format(all_weights[3]))
-    print('Weight in pounds: {:.2f}'.format(kilo_weight_4))
+    print('Weight in kilograms: {:.2f}'.format(kilo_weight_4))
 
 # Sort the weights in the list all_weights from lightest to heaviest weight and print the sorted list
 all_weights.sort()
-print(f'Sorted list: {all_weights}')
+print(f'\nSorted list: {all_weights}')
