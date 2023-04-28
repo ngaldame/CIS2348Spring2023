@@ -49,4 +49,25 @@ def quicksort(user_ids, i, k):
         quicksort(user_ids, i, seperate)
         quicksort(user_ids, seperate + 1, k)
 
+
 # Finish main driver code
+if __name__ == '__main__':
+
+    # user IDs will be in an input variable called user_ident and stored into an array called user_idents
+    user_idents = []
+    user_ident = input()
+
+    # while loop will append input into the array
+    while user_ident != '-1':
+        user_idents.append(user_ident)
+        user_ident = input()
+
+    # Initial call to quicksort
+    quicksort(user_idents, 0, len(user_idents) - 1)
+
+    # Print number of calls to quicksort
+    print(num_calls)
+
+    # Print sorted user ids
+    for user_ident in user_idents:
+        print(user_ident)
