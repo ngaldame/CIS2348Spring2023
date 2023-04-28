@@ -15,3 +15,17 @@ print(f'Weights: {all_weights}\n')
 # Conversion specifier used to specify printing two digits after the decimal point
 avg_weight = (weight_1 + weight_2 + weight_3 + weight_4) / 4
 print('Average weight: {:.2f}'.format(avg_weight))
+
+# Max element will be initialized a variable called max_weight, which will be at index 0
+# Conversion specifier used to specify printing two digits after the decimal point
+max_weight = all_weights[0]
+
+# for loop will search each weight in all_weights
+for weight in all_weights:
+
+    # if statement will determine if a weight is greater than the initialized max_weight
+    if weight > max_weight:
+        max_weight = weight
+
+# Print the max weight
+print('Max weight: {:.2f}'.format(max_weight))
