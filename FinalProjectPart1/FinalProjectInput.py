@@ -152,7 +152,7 @@ if __name__ == '__main__':
         if checked_type not in types:
             types.append(checked_type)
 
-    # Prompt the user for input
+    # Prompt the user for input (will be for part D)
     user_input = None
     while user_input != 'q':
         user_input = input('\nEnter an item manufacturer and type (ex: Apple laptop) or enter \'q\' to quit:\n')
