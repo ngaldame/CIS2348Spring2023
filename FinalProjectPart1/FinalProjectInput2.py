@@ -152,7 +152,7 @@ if __name__ == '__main__':
         if checked_type not in types:
             types.append(checked_type)
 
-    # Prompt the user for input (will be for part D)
+    # Prompt the user for input (will be for step iv)
     user_input = None
     while user_input != 'q':
         user_input = input('\nEnter an item manufacturer and type (ex: Apple laptop) or enter \'q\' to quit:\n')
@@ -178,4 +178,42 @@ if __name__ == '__main__':
                     else:
                         selected_type = word
 
-# Finish parts A B and C soon
+            # if-else statement determines if there is a match or not (will be for step i)
+            if not selected_manufacturer or not selected_type or bad_input:
+                print('No such item in inventory')
+            else:
+                # Ordered list of keys to iterate through based on highest price first using list comprehension
+                # noinspection PyTypeChecker
+                keys = sorted(items.keys(), key=[x for x in range(len(items)) if items[x]['price']], reverse=True)
+
+                # Get the matching list of items based on user input
+                matching_items = []
+
+                # Store items with same type, different manufacturer, in inventory, undamaged status, not past service
+                similar_items = {}
+                for item in keys:
+                    if items[item]['item_type'] == selected_type:
+
+                        # Don't add damaged items or past service to matched list or similar list
+                        today = datetime.now().date()
+                        service_date = items[item]['service_date']
+                        service_expiration = datetime.strptime(service_date, "%m/%d/%Y").date()
+                        expired = service_expiration < today
+                        if items[item]['manufacturer'] == selected_manufacturer:
+                            if not expired and not items[item]['damaged']:
+                                matching_items.append((item, items[item]))
+                        else:
+                            if not expired and not items[item]['damaged']:
+                                similar_items[item] = items[item]
+
+                # Output the item if matched, else notify that item is not found (will be for step ii)
+                if matching_items:
+                    item = matching_items[0]
+                    item_id = item[0]
+                    man_name = item[1]['manufacturer']
+                    item_type = item[1]['item_type']
+                    price = item[1]['price']
+
+                    # Print if the item is matched
+                    print(f'Your item: {item_id}, {man_name}, {item_type}, {price}')
+# TODO: work on part iii
