@@ -215,5 +215,5 @@ if __name__ == '__main__':
                     price = item[1]['price']
 
                     # Print if the item is matched
-                    print(f'Your item: {item_id}, {man_name}, {item_type}, {price}')
+                    print(f'Your item is: {item_id}, {man_name}, {item_type}, {price}')
 # TODO: work on part iii
