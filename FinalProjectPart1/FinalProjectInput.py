@@ -151,3 +151,5 @@ if __name__ == '__main__':
             manufacturers.append(checked_manufacturer)
         if checked_type not in types:
             types.append(checked_type)
+
+    # Below will be the code for Final Project Part 2
