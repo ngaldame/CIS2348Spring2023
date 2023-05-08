@@ -153,3 +153,28 @@ if __name__ == '__main__':
             types.append(checked_type)
 
     # Below will be the code for Final Project Part 2
+    # Prompt the user for input (will be for step iv)
+    user_input = None
+    while user_input != 'q':
+        user_input = input('\nEnter an item manufacturer and type (ex: Apple laptop) or enter \'q\' to quit:\n')
+        if user_input == 'q':
+            break
+        else:
+            # Check each word from user to see if there is a match in manufacturer and item type
+            selected_manufacturer = None
+            selected_type = None
+            user_input = user_input.split()
+            bad_input = False
+            for word in user_input:
+                if word in manufacturers:
+                    if selected_manufacturer:
+                        # Should only have one submitted manufacturer
+                        bad_input = True
+                    else:
+                        selected_manufacturer = word
+                elif word in types:
+                    if selected_type:
+                        # Should only have one submitted type
+                        bad_input = True
+                    else:
+                        selected_type = word
