@@ -206,4 +206,15 @@ if __name__ == '__main__':
                         else:
                             if not expired and not items[item]['damaged']:
                                 similar_items[item] = items[item]
-# TODO: step ii tomorrow or today
+
+                # Output the item if matched, else notify that item is not found (will be for step ii)
+                if matching_items:
+                    item = matching_items[0]
+                    item_id = item[0]
+                    man_name = item[1]['manufacturer']
+                    item_type = item[1]['item_type']
+                    price = item[1]['price']
+
+                    # Print if the item is matched
+                    print(f'Your item is: {item_id}, {man_name}, {item_type}, {price}')
+# TODO: Step iii for Part 2 later or tomorrow
