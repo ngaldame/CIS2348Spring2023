@@ -206,5 +206,4 @@ if __name__ == '__main__':
                         else:
                             if not expired and not items[item]['damaged']:
                                 similar_items[item] = items[item]
-
-# TODO: step ii tommorrow
+# TODO: step ii tomorrow or today
