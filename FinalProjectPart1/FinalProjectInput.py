@@ -178,3 +178,33 @@ if __name__ == '__main__':
                         bad_input = True
                     else:
                         selected_type = word
+
+            # if-else statement determines if there is a match or not (will be for step i)
+            if not selected_manufacturer or not selected_type or bad_input:
+                print('No such item in inventory')
+            else:
+                # Ordered list of keys to iterate through based on highest price first using list comprehension
+                # noinspection PyTypeChecker
+                keys = sorted(items.keys(), key=[x for x in range(len(items)) if items[x]['price']], reverse=True)
+
+                # Get the matching list of items based on user input
+                matching_items = []
+
+                # Store items with same type, different manufacturer, in inventory, undamaged status, not past service
+                similar_items = {}
+                for item in keys:
+                    if items[item]['item_type'] == selected_type:
+
+                        # Don't add damaged items or past service to matched list or similar list
+                        today = datetime.now().date()
+                        service_date = items[item]['service_date']
+                        service_expiration = datetime.strptime(service_date, "%m/%d/%Y").date()
+                        expired = service_expiration < today
+                        if items[item]['manufacturer'] == selected_manufacturer:
+                            if not expired and not items[item]['damaged']:
+                                matching_items.append((item, items[item]))
+                        else:
+                            if not expired and not items[item]['damaged']:
+                                similar_items[item] = items[item]
+
+# TODO: step ii tommorrow
