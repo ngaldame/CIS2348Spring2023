@@ -217,4 +217,34 @@ if __name__ == '__main__':
 
                     # Print if the item is matched
                     print(f'Your item is: {item_id}, {man_name}, {item_type}, {price}')
-# TODO: Step iii for Part 2 later or tomorrow
+
+                    # Output item from different manufacturer that is closest in price to matched item
+                    if similar_items:
+                        matched_price = price
+
+                        # Get the similar item with the closest price to the initial item
+                        closest_item = None
+                        closest_price_diff = None
+                        for item in similar_items:
+                            if closest_price_diff is None:
+                                closest_item = similar_items[item]
+                                closest_price_diff = abs(int(matched_price) - int(similar_items[item]['price']))
+                                item_id = item
+                                man_name = similar_items[item]['manufacturer']
+                                item_type = similar_items[item]['item_type']
+                                price = similar_items[item]['price']
+                                continue
+
+                            # print a recommended same item type from another manufacturer for part iii
+                            price_diff = abs(int(matched_price) - int(similar_items[item]['price']))
+                            if price_diff < closest_price_diff:
+                                closest_item = item
+                                closest_price_diff = price_diff
+                                item_id = item
+                                man_name = similar_items[item]['manufacturer']
+                                item_type = similar_items[item]['item_type']
+                                price = similar_items[item]['price']
+
+                                print(f'Also look at: {item_id}, {man_name}, {item_type}, {price}')
+                else:
+                    print('No such item in inventory')
